@@ -1,6 +1,6 @@
 FROM python:latest
-EXPOSE 0
+EXPOSE 5969
 WORKDIR /flaskapp
-RUN pip install flaskapp
+RUN pip install -r requirements.txt
 COPY . .
-CMD [ "flask","RUN","--host","0.0.0.0" ]
+CMD python ./app.py
