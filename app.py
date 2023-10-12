@@ -23,7 +23,7 @@ app.config['DETECTED_FOLDER'] = DETECTED_FOLDER
 if not os.path.exists(DETECTED_FOLDER):
     os.makedirs(DETECTED_FOLDER)
 
-@app.route('/')
+@app.route('/flaskapp/')
 def index():
     return render_template('index.html', result_image_path=None)
 
